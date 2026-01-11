@@ -1,0 +1,9 @@
+battery_simulator_node:
+  ros__parameters:
+    initial_battery: 100.0
+    max_battery_level: 94.0
+    idle_drain_rate: 0.5
+    moving_drain_rate: 5.0
+    rotating_drain_rate: 1.0
+    charge_rate: 5.0
+    update_rate: 10.0

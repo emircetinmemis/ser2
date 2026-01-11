@@ -1,0 +1,13 @@
+safety_smach_node:
+  ros__parameters:
+    # Battery thresholds (with hysteresis)
+    low_battery_threshold: 20.0
+    battery_ok_threshold: 85.0
+
+    # Collision thresholds (with hysteresis)
+    collision_distance: 0.5
+    safe_distance: 0.75
+
+    # Robot motion
+    rotation_speed: 10.0
+    monitor_rate: 10.0

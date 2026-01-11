@@ -1,0 +1,20 @@
+# ROS2 build artifacts
+workspace/build/
+workspace/install/
+workspace/log/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Data
+*.bag
+*.db3
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/

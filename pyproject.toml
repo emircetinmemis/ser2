@@ -1,0 +1,74 @@
+[project]
+name = "assignment-2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10.12"
+dependencies = [
+    "py-tree>=1.0.1",
+    # Base Dependencies
+    "setuptools>=80.9.0",
+]
+
+[project.optional-dependencies]
+visualization = [
+    # Visualization Dependencies
+    "matplotlib==3.10.7",
+    "matplotlib-inline==0.2.1",
+    "plotly==6.3.1",
+    "seaborn==0.13.2",
+]
+ros_based = [
+    # Ros-Based Dependencies
+    "transforms3d==0.4.2",
+    "rosbags==0.10.11",
+]
+scientific = [
+    # Scientific Computing Dependencies
+    "numpy==2.2.6",
+    "scipy==1.15.3",
+    "sympy==1.14.0",
+]
+utility = [
+    # Utility Dependencies
+    "pandas==2.3.3",
+    "pillow==12.0.0",
+    "pydantic>=2.12.3",
+    "rich>=14.2.0",
+    "tqdm>=4.67.1",
+]
+tt = ["graphviz>=0.21"]
+
+[dependency-groups]
+dev = [
+    # Development Dependencies
+    "ipykernel<7",
+    "ipython",
+    "ipywidgets",
+    "jupyter",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["workspace/src"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+# Exclude ROS-specific linter tests that require ament packages
+addopts = [
+    "-v",
+    "--tb=short",
+    "-p",
+    "no:launch_testing",
+    "--ignore=workspace/src/robile_battery_simulator/test/test_copyright.py",
+    "--ignore=workspace/src/robile_battery_simulator/test/test_flake8.py",
+    "--ignore=workspace/src/robile_battery_simulator/test/test_pep257.py",
+    "--ignore=workspace/src/robile_safety_bt/test/test_copyright.py",
+    "--ignore=workspace/src/robile_safety_bt/test/test_flake8.py",
+    "--ignore=workspace/src/robile_safety_bt/test/test_pep257.py",
+    "--ignore=workspace/src/robile_safety_smach/test/test_copyright.py",
+    "--ignore=workspace/src/robile_safety_smach/test/test_flake8.py",
+    "--ignore=workspace/src/robile_safety_smach/test/test_pep257.py",
+    "--ignore=workspace/src/robile_safety_system/test/test_copyright.py",
+    "--ignore=workspace/src/robile_safety_system/test/test_flake8.py",
+    "--ignore=workspace/src/robile_safety_system/test/test_pep257.py",
+]
