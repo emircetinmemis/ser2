@@ -170,8 +170,7 @@ ros2 topic echo /scan
 
 - ROS2 Humble
 - Python 3.10+
-- py_trees
-- py_trees_ros
+- py_trees & py_trees_ros
 - smach
 - robile_gazebo (simulation environment)
 
